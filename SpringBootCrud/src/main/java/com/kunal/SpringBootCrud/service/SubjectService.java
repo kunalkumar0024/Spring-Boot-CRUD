@@ -11,7 +11,7 @@ import com.kunal.SpringBootCrud.bean.Subject;
 import com.kunal.SpringBootCrud.repository.SubjectRepository;
 
 
-@Service 
+@Service
 public class SubjectService {
 	@Autowired
 	public SubjectRepository subjectRepo;
@@ -25,17 +25,17 @@ public class SubjectService {
 	public void addSubject(Subject subject) {
 		// TODO Auto-generated method stub
 		subjectRepo.save(subject);
-		
+
 	}
 	public void updateSubject(String id, Subject subject) {
 		// TODO Auto-generated method stub
 		subjectRepo.save(subject);
-		
+
 	}
 	public void deleteSubject(String id) {
 		// TODO Auto-generated method stub
 		subjectRepo.deleteById(id);
-		
+
 	}
 
 }

@@ -17,20 +17,20 @@ import com.kunal.SpringBootCrud.service.SubjectService;
 
 @RestController
 @RequestMapping("subjects")
-public class SubjectController {
+public class  SubjectController {
 
 	@Autowired
 	public SubjectService subjectService;
 	@GetMapping("/get-all-subjects")
 	public List<Subject> getAllSubject(){
 		return subjectService.getAllSubject();
-		
+
 	}
 	@PostMapping("/add-subject")
 	public void addSubject(@RequestBody Subject subject) {
-		
+
 		subjectService.addSubject(subject);
-		}
+	}
 	@PutMapping("/update-subject/{id}")
 	public void updateSubject(@PathVariable String id, @RequestBody Subject subject) {
 		subjectService.updateSubject(id,subject);
